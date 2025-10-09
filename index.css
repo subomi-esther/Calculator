@@ -1,0 +1,180 @@
+@font-face {
+   font-family: "Caveat Medium" ;
+   src: url('fonts/Caveat-Medium.ttf');
+}
+@font-face {
+   font-family: "Caveat Regular" ;
+   src: url('fonts/Caveat-Regular.ttf');
+}
+@font-face {
+   font-family: "Caveat Bold" ;
+   src: url('fonts/Caveat-Bold.ttf');
+}
+
+form {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   gap: 20px;
+   margin-bottom: 30px;
+   
+}
+.head {
+   display: flex;
+   justify-content: center;
+}
+input {
+   height: 20px;
+   padding: 10px;
+   border-radius: 6px;
+   border: none;
+   background-color:#d7c1a8;
+   outline: none;
+   text-align: center;
+   caret-color: #5f2119;
+   font-family: 'Caveat Bold';
+   font-size: 23px;
+   
+   
+}
+input::placeholder {
+  color: #5f2119;
+  font-family: 'Caveat Regular';
+  
+}
+
+body {
+   background-color: #5f2119;
+    font-family: 'Caveat Medium';
+  
+}
+
+.buttonDiv .clear:hover, .clear:hover {
+   color: white;
+   background-color: hsl(7, 58%, 24% );
+}
+
+h1 {
+   color: #d2b9aa;
+  /* text-align: center; */
+  font-family: "Caveat Medium";
+}
+
+button[type=reset] {
+   padding: 10px;
+   border-radius: 6px;
+   border: none;
+   background-color:#d7c1a8;
+   outline: none;
+   text-align: center;
+}
+.clear {
+   color: #5f2119;
+      font-family: 'Caveat Bold';
+
+}
+.buttonDiv {
+   background-color: #6c5141;
+   width: 250px;
+   display: grid;
+   justify-content: center;
+   grid-template-columns: auto auto ;
+   justify-content: center;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border-radius: 6px;
+   gap: 10px;
+   margin-bottom: 10px;
+}
+
+.buttonDiv button {
+    padding: 10px;
+    width: 100px;
+   border-radius: 6px;
+   border: none;
+   background-color:#d7c1a8;
+   outline: none;
+   text-align: center;
+   color: #5f2119;
+      font-family: 'Caveat Bold';
+      font-size: 16px;
+
+}
+.buttonDiv button:hover {
+   background-color: #aca494;
+}
+.buttonAndHistory{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+.answerDiv {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+
+}
+
+img {
+   mix-blend-mode: multiply;
+}
+
+.answers {
+ 
+   background-color: #6c5141;
+   text-align: center;
+   width: 250px;
+   height: 30px;
+   padding: 10px;
+   color: white ;
+   font-size: 20px;
+   border-radius: 6px;
+}
+
+.history {
+      background-color: #6c5141;
+   width: 250px;
+   padding: 10px;
+   border-radius: 6px;
+}
+
+
+.show, .hide {
+   background-color: #d7c1a8;
+   text-align: center;
+   padding: 10px;
+   border-radius: 6px;
+   border: none;
+   color: #5f2119;
+      font-family: 'Caveat Bold';
+
+}
+
+ul {
+   color: aliceblue;
+   list-style:none;
+
+}
+
+footer{
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   color: white;
+}
+
+
+@media screen and (max-width: 600px)  {
+   form {
+      display: flex;
+      flex-direction: column;
+   }
+ 
+
+   .buttonDiv, .history {
+      width: 200px;
+   }
+}

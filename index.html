@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculator App</title>
+</head>
+<body>       
+
+    <div class="head">
+            <img src="bow.jpg" width="50px" height="50px" alt="">
+
+     <h1>My Simple Calculator</h1>
+    </div>
+
+
+        <div>
+            <form >
+
+             <input type="number" placeholder="Enter number"  class="entryOne"    />
+             <input type="number"  placeholder="Enter number"  class="entryTwo" oninput="enableBtn()"  onkeyup="validate(this)" />
+
+             <button type="reset" class="clear" onclick="clearOnly()"  >Clear</button>
+
+            </form>
+
+
+        </div>
+        <div class="answerDiv">
+                    <p class="answers"> </p>
+
+        </div>
+
+        <div class="buttonAndHistory">
+                    <div class="buttonDiv">
+            <button class="enter" onclick="addNumber()"  disabled> + </button>
+            <button class="enter" onclick="subNumber()" disabled> - </button>
+            <button class="enter" onclick="multiplyNumber()" disabled> x </button>
+            <button class="enter" onclick="divideNumber()" disabled> / </button>
+            <button class="enter" onclick="squareNumber()" disabled> ^ </button>
+            <button type="reset" class="clear" onclick="clearAnswers()" >Clear History</button>
+
+        </div>
+
+
+
+        <div class="history">
+            <p class="show">Show history</p>
+            <ul class="allAnswers" hidden > </ul>
+            <button class="hide" hidden>Hide History</button>
+        </div>
+
+
+        </div>
+     <footer>
+        &copy; Subomi. 2025.
+     </footer>
+
+    <!-- </div> -->
+
+    <script src="index.js"></script>
+</body>
+</html>
