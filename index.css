@@ -118,9 +118,6 @@ button[type=reset] {
 
 }
 
-img {
-   mix-blend-mode: multiply;
-}
 
 .answers {
  
@@ -153,6 +150,10 @@ img {
 
 }
 
+img {
+   margin-top: 20px;
+}
+
 ul {
    color: aliceblue;
    list-style:none;
@@ -174,7 +175,8 @@ footer{
    }
  
 
-   .buttonDiv, .history {
+   .history {
       width: 200px;
    }
+
 }
