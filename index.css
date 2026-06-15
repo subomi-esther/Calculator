@@ -136,6 +136,7 @@ button[type=reset] {
    width: 250px;
    padding: 10px;
    border-radius: 6px;
+
 }
 
 
@@ -157,7 +158,9 @@ img {
 ul {
    color: aliceblue;
    list-style:none;
-
+   /* overflow: scroll; */
+   height: 100px;
+   overflow: scroll;
 }
 
 footer{

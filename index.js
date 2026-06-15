@@ -24,8 +24,8 @@ clear.addEventListener('click', function(){
 })
 
 function addNumber() {
-  const firstEntry  = document.querySelector('.entryOne').value
-  const secondEntry = document.querySelector('.entryTwo').value
+  // const firstEntry  = document.querySelector('.entryOne').value
+  // const secondEntry = document.querySelector('.entryTwo').value
   const sum = Number(firstEntry) + Number (secondEntry)
 
     document.querySelector('.answers').innerText = `${sum}`
@@ -46,11 +46,11 @@ function validate(obj) {
   }
 }
 
-
- function subNumber() {
-   
    const firstEntry  = document.querySelector('.entryOne').value
   const secondEntry = document.querySelector('.entryTwo').value
+ function subNumber() {
+   
+
   const sub = Number(firstEntry) - Number (secondEntry)
       allAnsw.innerHTML += `<li>${sub} </li>`
 
@@ -61,8 +61,8 @@ function validate(obj) {
  }
  function multiplyNumber() {
    
-   const firstEntry  = document.querySelector('.entryOne').value
-  const secondEntry = document.querySelector('.entryTwo').value
+  //  const firstEntry  = document.querySelector('.entryOne').value
+  // const secondEntry = document.querySelector('.entryTwo').value
   const multiply = Number(firstEntry) * Number (secondEntry)
     allAnsw.innerHTML += `<li>${multiply} </li>`
 
@@ -72,8 +72,8 @@ function validate(obj) {
  }
  function divideNumber() {
    
-   const firstEntry  = document.querySelector('.entryOne').value
-  const secondEntry = document.querySelector('.entryTwo').value
+  //  const firstEntry  = document.querySelector('.entryOne').value
+  // const secondEntry = document.querySelector('.entryTwo').value
   const divide = Number(firstEntry) / Number (secondEntry)
     allAnsw.innerHTML += `<li>${divide} </li>`
 
