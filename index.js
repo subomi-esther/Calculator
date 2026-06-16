@@ -3,8 +3,11 @@ const button = document.querySelectorAll('.enter')
 const showHistory = document.querySelector('.show')
 const allAnsw = document.querySelector('.allAnswers')
 const items = allAnsw.getElementsByTagName('li')
-const hideAns = document.querySelector('.hide')
+const hideAns = document.querySelector('.hideHistory')
 // const ul =  document.querySelector('.answers')
+const inputOne = document.getElementById('entryOne')
+const inputTwo = document.getElementById('entryTwo')
+const form = document.getElementById('form')
 
 
 function enableBtn() {
@@ -14,6 +17,12 @@ function enableBtn() {
 
 
  } 
+function enable () {
+  if (inputOne.value != '' && inputTwo.value !='') {
+    enableBtn()
+  } 
+}
+form.addEventListener('input', enable)
 
 
 clear.addEventListener('click', function(){
@@ -24,60 +33,48 @@ clear.addEventListener('click', function(){
 })
 
 function addNumber() {
-  // const firstEntry  = document.querySelector('.entryOne').value
-  // const secondEntry = document.querySelector('.entryTwo').value
+  const firstEntry  = document.querySelector('.entryOne').value
+  const secondEntry = document.querySelector('.entryTwo').value
   const sum = Number(firstEntry) + Number (secondEntry)
 
-    document.querySelector('.answers').innerText = `${sum}`
+    document.querySelector('.answers').textContent = `${sum}`
     allAnsw.innerHTML += `<li>${sum} </li>`
 
 }
-function validate(obj) {
-  if (obj.value.length > 0) {
-      button.forEach(btn => {
-        btn.disabled= false
-       })
 
-  } else {
 
-    button.forEach(btn => {
-      btn.disabled= true
-    })
-  }
-}
 
-   const firstEntry  = document.querySelector('.entryOne').value
-  const secondEntry = document.querySelector('.entryTwo').value
  function subNumber() {
-   
+      const firstEntry  = document.querySelector('.entryOne').value
+  const secondEntry = document.querySelector('.entryTwo').value
 
   const sub = Number(firstEntry) - Number (secondEntry)
       allAnsw.innerHTML += `<li>${sub} </li>`
 
-  document.querySelector('.answers').innerText = `${sub}`
+  document.querySelector('.answers').textContent = `${sub}`
 
    
 
  }
  function multiplyNumber() {
    
-  //  const firstEntry  = document.querySelector('.entryOne').value
-  // const secondEntry = document.querySelector('.entryTwo').value
+   const firstEntry  = document.querySelector('.entryOne').value
+  const secondEntry = document.querySelector('.entryTwo').value
   const multiply = Number(firstEntry) * Number (secondEntry)
     allAnsw.innerHTML += `<li>${multiply} </li>`
 
-  document.querySelector('.answers').innerText = `${multiply}`
+  document.querySelector('.answers').textContent = `${multiply}`
 
 
  }
  function divideNumber() {
    
-  //  const firstEntry  = document.querySelector('.entryOne').value
-  // const secondEntry = document.querySelector('.entryTwo').value
+   const firstEntry  = document.querySelector('.entryOne').value
+  const secondEntry = document.querySelector('.entryTwo').value
   const divide = Number(firstEntry) / Number (secondEntry)
     allAnsw.innerHTML += `<li>${divide} </li>`
 
-  document.querySelector('.answers').innerText = `${divide}`
+  document.querySelector('.answers').textContent = `${divide}`
 
 
  }
@@ -92,20 +89,21 @@ function squareNumber(){
          allAnsw.innerHTML += `<li>${square} </li>`
 
 
-    document.querySelector('.answers').innerText = `${square}`
+    document.querySelector('.answers').textContent = `${square}`
    
 }
 
 
 function clearAnswers() {
-  allAnsw.innerText = ''
-      hideAns.hidden = true
+  allAnsw.textContent = ''
+  allAnsw.hidden = true
+  hideAns.hidden = true
 
 
 }
 
 function clearOnly() {
-   document.querySelector('.answers').innerText = ''
+   document.querySelector('.answers').textContent = ''
 }
 
  showHistory.addEventListener ('click', function(){
@@ -117,16 +115,6 @@ function clearOnly() {
 
  })      
 
-  // for (let i = 0; i < items.length; i++){
-  //   if (items.length > 7) {
-  //     items[i].style.display = 'none'
-  //     console.log('greater')
-  //   } else if (items.length <= 5) {
-  //     items[i].style.display = 'block'
-
-  //     console.log('lesser')
-  //   }
-  //  }
 
 
  hideAns.addEventListener ('click', ()=> {

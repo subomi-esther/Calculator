@@ -140,7 +140,7 @@ button[type=reset] {
 }
 
 
-.show, .hide {
+.show, .hideHistory {
    background-color: #d7c1a8;
    text-align: center;
    padding: 10px;
@@ -158,7 +158,6 @@ img {
 ul {
    color: aliceblue;
    list-style:none;
-   /* overflow: scroll; */
    height: 100px;
    overflow: scroll;
 }
